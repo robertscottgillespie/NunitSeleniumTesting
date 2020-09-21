@@ -7,10 +7,11 @@ using NUnitTestSelenium.Pages;
 using NUnitTestSelenium.TestCases;
 
 //To do:
-//Add assertions and error handling
-//Add logging - log errors and steps
+//Add assertions (assert.true assert.isEqual ) and error handling (Try-Catch blocks)
+//Add logging - log errors and steps - Done
+//Add App.Config - done
 //Add Reporting - test reporting in HTML
-//Add data reader - store config in xml file, data in csv or excel
+//Add data reader - store dynamic test data in excel, csv, json, xml, txt files
 
 
 namespace NUnitTestSelenium
@@ -29,7 +30,13 @@ namespace NUnitTestSelenium
         {
 
             RegisterUserTest.RegisterUserTest1(driver);
-            
+            Thread.Sleep(3000);
+        }
+        [Test]
+        public void Test2()
+        { 
+            LoginTest.LoginTest1(driver);
+            Thread.Sleep(3000);         
         }
         [TearDown]
         public void TearDown()
