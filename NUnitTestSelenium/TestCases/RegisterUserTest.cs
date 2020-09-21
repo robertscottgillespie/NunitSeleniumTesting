@@ -48,6 +48,9 @@ namespace NUnitTestSelenium.TestCases
             regPage.TypeEmail(email);
             regPage.TypePassword(passwd);
             regPage.TypeConfirmPassword(passwd);
+            regPage.ClickSubmitButton();
+
+            //verify and assert that the register new user was succesfull
         }
     }
 }

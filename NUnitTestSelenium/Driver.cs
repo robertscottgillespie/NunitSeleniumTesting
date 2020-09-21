@@ -10,7 +10,7 @@ namespace NUnitTestSelenium
         }
         public static IWebDriver InitializeDriver()
         {
-            IWebDriver driver = new ChromeDriver("/Users/robertgillespie/eclipse-workspace/");
+            IWebDriver driver = new ChromeDriver("C:\\Users\\RobertGillespie\\source\\repos");
             return driver;
         }
 

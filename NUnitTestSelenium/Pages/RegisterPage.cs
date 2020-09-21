@@ -1,6 +1,8 @@
 ﻿using System;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
+using NLog;
+using System.Configuration;
 
 namespace NUnitTestSelenium.Pages
 {
@@ -8,7 +10,8 @@ namespace NUnitTestSelenium.Pages
     {
 
         private IWebDriver driver;
-        String baseUrl = "http://demo.guru99.com/test/newtours/";
+        String baseUrl = ConfigurationManager.AppSettings.Get("BaseURL");
+        private static Logger _logger = LogManager.GetCurrentClassLogger();
 
         public RegisterPage(IWebDriver driver)
         {
@@ -52,12 +55,16 @@ namespace NUnitTestSelenium.Pages
         [FindsBy(How = How.XPath, Using = "//a[contains(text(),'REGISTER')]")]
         private IWebElement registerLink;
 
+        [FindsBy(How = How.Name, Using = "submit")]
+        private IWebElement submitButton;
+
 
 
         public void GoToHomePage()
         {
             driver.Navigate().GoToUrl(baseUrl);
             driver.Manage().Window.Maximize();
+            _logger.Info($"We have navigated to page {baseUrl}");
         }
 
         public void GoToRegisterPage()
@@ -109,6 +116,11 @@ namespace NUnitTestSelenium.Pages
         public void TypeConfirmPassword(string password1)
         {
             confirmPassword.SendKeys(password1);
+        }
+
+        public void ClickSubmitButton()
+        {
+            submitButton.Click();
         }
 
 
