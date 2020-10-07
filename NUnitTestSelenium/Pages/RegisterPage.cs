@@ -1,24 +1,16 @@
-﻿using System;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using NLog;
-using System.Configuration;
+using System;
+
 
 namespace NUnitTestSelenium.Pages
 {
-    public class RegisterPage
+    public class RegisterPage : BasePage
     {
+        String expectedTitle = "Register: Mercury Tours";
+        public RegisterPage(IWebDriver driver) : base(driver) { }
 
-        private IWebDriver driver;
-        String baseUrl = ConfigurationManager.AppSettings.Get("BaseURL");
-        private static Logger _logger = LogManager.GetCurrentClassLogger();
-
-        public RegisterPage(IWebDriver driver)
-        {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
-
-        }
         [FindsBy(How = How.Name, Using = "firstName")]
         private IWebElement firstName;
 
@@ -58,14 +50,11 @@ namespace NUnitTestSelenium.Pages
         [FindsBy(How = How.Name, Using = "submit")]
         private IWebElement submitButton;
 
-
-
-        public void GoToHomePage()
+        public void VerifyRegPage()
         {
-            driver.Navigate().GoToUrl(baseUrl);
-            driver.Manage().Window.Maximize();
-            _logger.Info($"We have navigated to page {baseUrl}");
+            Assert.AreEqual(expectedTitle, Driver.Title);
         }
+
 
         public void GoToRegisterPage()
         {

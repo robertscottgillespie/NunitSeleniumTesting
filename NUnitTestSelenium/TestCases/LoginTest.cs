@@ -1,14 +1,11 @@
 ﻿using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System.Threading;
-using NUnit.Framework;
 using NUnitTestSelenium.Pages;
 using System.Configuration;
 
 namespace NUnitTestSelenium.TestCases
 {
-    public class LoginTest
+    public class LoginTest : TestBase
     {
         public LoginTest()
         {

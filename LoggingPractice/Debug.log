@@ -3,3 +3,13 @@
 2020-09-20 21:49:34.0880 - 15 - NUnitTestSelenium.Pages.RegisterPage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
 2020-09-20 21:52:29.2787 - 13 - NUnitTestSelenium.Pages.RegisterPage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
 2020-09-20 21:52:42.5320 - 13 - NUnitTestSelenium.Pages.HomePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-22 00:14:41.8629 - 13 - NUnitTestSelenium.Pages.RegisterPage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-22 00:14:56.1137 - 13 - NUnitTestSelenium.Pages.HomePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-22 21:53:40.6793 - 15 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-22 21:54:10.9782 - 15 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-22 22:20:38.3893 - 15 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-22 22:24:43.9848 - 15 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-23 23:18:27.2866 - 14 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-23 23:18:41.1000 - 14 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-24 12:25:06.5132 - 13 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
+2020-09-24 12:25:19.8723 - 13 - NUnitTestSelenium.Pages.BasePage.GoToHomePage - INFO: We have navigated to page http://demo.guru99.com/test/newtours/ 
