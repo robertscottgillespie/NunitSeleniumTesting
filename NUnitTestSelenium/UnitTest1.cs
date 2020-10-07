@@ -8,10 +8,12 @@ using NUnitTestSelenium.TestCases;
 
 //To do:
 //Add assertions (assert.true assert.isEqual ) and error handling (Try-Catch blocks)
+//Add BasePage class: every Page class should extend and inherit from BasePage -done
+//Add BaseTest class: every Test class should extend and inherit common methods of BaseTest
 //Add logging - log errors and steps - Done
 //Add App.Config - done
 //Add Reporting - test reporting in HTML
-//Add data reader - store dynamic test data in excel, csv, json, xml, txt files
+//Add data reader - store dynamic test data in csv, json, xml, txt files
 
 
 namespace NUnitTestSelenium
@@ -41,6 +43,7 @@ namespace NUnitTestSelenium
         [TearDown]
         public void TearDown()
         {
+            driver.Close();
             driver.Quit();
         }
     }

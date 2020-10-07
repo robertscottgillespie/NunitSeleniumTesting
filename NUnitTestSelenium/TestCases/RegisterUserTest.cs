@@ -1,13 +1,11 @@
 ﻿using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System.Threading;
-using NUnit.Framework;
 using NUnitTestSelenium.Pages;
+using NUnit.Framework;
 
 namespace NUnitTestSelenium.TestCases
 {
-    public class RegisterUserTest
+    public class RegisterUserTest : TestBase
     {
         public RegisterUserTest()
         {
@@ -15,7 +13,7 @@ namespace NUnitTestSelenium.TestCases
         public static void RegisterUserTest1(IWebDriver driver)
         {
 
-            //String expectedTitle = "Register: Mercury Tours";
+            
             String firstName = "Rob";
             String lastName = "Gill";
             String phoneNum = "05789594586";
@@ -33,10 +31,11 @@ namespace NUnitTestSelenium.TestCases
             //we are then using the methods of this object to use a 'sendkeys' and enter
             //data into the fields on the page.
 
-            //var driver = Driver.InitializeDriver();
+         
             RegisterPage regPage = new RegisterPage(driver);
             regPage.GoToHomePage();
             regPage.GoToRegisterPage();
+            //regPage.VerifyRegPage();
             regPage.TypeFirstName(firstName);
             regPage.TypeLastName(lastName);
             regPage.TypePhone(phoneNum);
@@ -51,42 +50,16 @@ namespace NUnitTestSelenium.TestCases
             regPage.ClickSubmitButton();
 
             //verify and assert that the register new user was succesfull
+            //regPage2.VerifyUserRegistration();
         }
     }
 }
-/*
 
 
 
 
 
 
-            /*
-            String actualTitle = driver.Title;
-
-            if (actualTitle.Equals(expectedTitle))
-            {
-                Console.WriteLine("Test Passed!");
-            }
-            else
-            {
-                Console.WriteLine("Test Failed");
-            }
 
             
-            Thread.Sleep(2000);
-            driver.FindElement(By.Name("submit")).Click();
-
-            String successText = driver.FindElement(By.XPath("//font[contains(text(),'Thank you for registering.')]")).Text;
-            Console.WriteLine(successText);
-            if (successText.Contains("Thank you for registering"))
-            {
-                Console.WriteLine("Register user passed!");
-            }
-            else
-            {
-                Console.WriteLine("Register user failed");
-            }
-            */
-
 
